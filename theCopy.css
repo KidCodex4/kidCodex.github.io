@@ -1,0 +1,323 @@
+
+/*------------------------schedule--------------------------------*/
+
+#schedule{
+    background-color:var(--schdl-BG); 
+     text-align: center; 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh; 
+   }
+   
+ 
+   table{
+    background-color:rgb(220, 214, 210);
+     width: 1000px; 
+     height: 400px; 
+     border: 6px solid 	LightSlateGray; 
+    text-align: center; 
+	 }
+	 
+	 .cellSize{
+		 height:"50";
+		 width:"100";
+	 }
+   
+   td, th {
+     border: 1px solid #000; 
+     padding: 8px;
+     	 
+   }
+   
+  
+   #tableT{
+   text-align: center;	
+    color: #bcae7d;
+    font-size: 1.2rem;
+    font-family: arial;
+    padding: 0.5em;
+   }
+   
+   
+   #turN{
+   text-align: left;	
+    color: #a9a9a9;
+    font-size: 1.9rem;
+   }
+   
+   a:link{color: rgb(250, 249 , 249);}
+   a:focus{color: #b1abd1;}
+   a:visited{color: gray;}
+   a:hover{color: DarkGray; Background:LightSlateGray;}
+   a:active{color:#9932CC }
+   
+   a {
+text-decoration : none;
+color : inherit;
+}
+   
+   h3 a.tut{
+   color: pink;	
+   }
+   
+   
+   ul.list h2
+   {
+    color: #281f8b;
+
+    font-size: 1.2rem;
+    font-family: arial;
+   
+   }
+   
+   ul.list p
+   {
+    color: #7f96a9;
+    font-size: 0.9em;
+    font-family: "Courier";
+    font-weight: bold;
+   
+   }
+   
+   .totalCourse .course .list li {
+        font-family: "Calibri";
+        font-size: 0.8em;
+   }
+   
+   .totalCourse .course .list {
+       list-style-type:disc;
+   }
+   
+   .list li{/**/
+        font-family: "Calibri";
+             font-size: 0.9em;
+   
+   }
+   
+   
+   /*------------------------End schedule--------------------------------*/
+   
+   /*-------------------------------admin--------------------------------------*/
+   
+   
+   
+   #admin{
+       display: flex;
+       background-color: transparent; 
+       padding: 10px;	
+	   position: relative;
+	   margin-left:150px;
+   }
+   
+     /* Style for the container */
+           .regKids,.Courses{
+            width:55em; 
+            height:25em;
+			
+   
+           }
+   
+           /* Style for the title */
+           .title {
+               font-weight: bold;
+               text-align: center;
+               padding: 10px;
+               float:left;
+			   color:#bcae7d;
+               font-size:23px;
+
+           }
+   
+           /* Style for the scrollbar */
+           .scrollbar {
+           width: 50em; 
+       height: 20em; 
+               overflow-y: scroll;
+               padding: 2em;
+               background-color: rgb(128, 128, 128);
+                   padding: 0.650em; 
+				   
+				   
+   
+           }
+   
+          
+   /*======================*/
+   .page-container {
+       width: 100%;
+       height: 100vh; 
+       background-color: #fff; 
+       overflow: hidden; 
+   }
+   
+   
+   .scroll-box {
+       width: 50em; 
+       height: 20em; 
+       overflow-y: auto; 
+       padding: 0.650em; 
+    background-color:rgb(230, 229, 227);
+    border-radius: 5px;
+	
+	box-shadow:0 4px 8px rgba(128, 128, 128, 0.5);
+	
+   }
+   
+       
+   
+   .course{
+       width: 18em; 
+       height: 8em; 
+       background-color: var(--coursClass);
+       overflow-y: auto; 
+       padding: 0.650em; 
+       display: flex;
+	   box-shadow:0 4px 8px rgba(128, 128, 128, 0.5);
+	  
+       
+   }
+   
+
+   
+   .totalCourse{
+           padding: 0.650em;
+   }
+     
+    /*----------------------toturs------------------*/
+   
+   .tutors{
+       width: 16em;  
+       height: 45em; 
+       background-color:rgb(220, 214, 210);
+       padding: 0.650em;
+	   box-shadow:0 4px 8px rgba(128, 128, 128, 0.5);
+
+	   }
+   
+   
+   #tutorsBox{
+       width: 17.5em;  
+       height: 50em;
+	
+     border: none;
+
+   }
+   
+   #CouresKids {
+     border: none;
+	 
+   }
+    /*----------------------toturs------------------*/
+   
+   
+   
+   
+   
+   /*----------------------lists------------------*/
+   
+   .list {
+               padding: 10px;
+               border: none;
+           }
+   
+          .list + .list {/**/
+            margin-left: 2px; 
+        }
+		
+           
+           
+           
+           .list div {
+               margin: 5px 0; 
+           }
+           
+       
+   
+   /*----------------------lists------------------*/
+   
+   .listContainer{
+           display: flex;
+		  
+   }
+   
+   
+       #CouresKids,#tutorsBox{
+           border: 1px ; 
+               padding: 10px;
+               margin: 5px;
+       }
+       
+       .cn{
+           background-color:#fff;
+            width: 235px; 
+            height: 30px;
+            padding: 10px;
+            font-weight:bold;
+            font-size:15px;
+			box-shadow:0 4px 8px rgba(128, 128, 128, 0.5);
+       }
+       
+       
+       div.tut a h3{
+       padding: 5px;	
+       }
+       
+      
+       
+       h2.totalCourse{
+        color: #bcae7d;
+        font-size: 1.2rem;
+        font-family: arial;
+        padding: 0.5em;
+       }
+	   
+	   
+/*--------------------more button----------------*/
+
+.hidden {
+    display: none;
+}
+
+.hidden2 {
+    display: none;
+}
+
+.hidden3 {
+    display: none;
+}
+
+.hidden4 {
+    display: none;
+}
+
+
+
+/*--------------------more button----------------*/
+
+
+#coursesBoxes{
+	margin-left:80px;
+	margin-right:50px;
+}
+
+
+
+/*lena*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+:root {
+
+  --coursClass: #fff;
+
+  --schdl-BG:whitesmoke;   
+}
+
+.dark-theme{
+ --coursClass: LightGrey;
+  
+ --schdl-BG:#0d3e70;
+
+}

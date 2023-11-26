@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KIDCODEX CourseEnrolment</title>
+    <link rel="stylesheet" href="c.css">
+    <link rel="stylesheet" href="nav_footer.css"/>
+
+   
+
+<style>
+    
+          
+    
+
+          
+        
+    
+    .nested-navbar {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        z-index: 1;
+        width: 100%; 
+    }
+    
+    
+    .Parent_Dashboard:hover .nested-navbar {
+        display: block;
+    }
+    
+    .nested-navbar a {
+        padding: 10px 20px;
+        display: block;
+        text-decoration: none;
+        color: #333;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nested-navbar a:hover {
+        background-color: #f2f2f2;
+    }
+    
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    
+    
+    
+    .checkbox {
+        display: none; /* Hide the default checkbox */
+    }
+    
+    .option label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .option img {
+        width: 140px; /* Set the width of the course images */
+        height: 140px; /* Set the height of the course images */
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    
+    .option .course-name {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #bcae7d;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    .option input[type="checkbox"]:checked + label img {
+        border-color:#4c2a83 /* Border color when checkbox is checked */
+    }
+    
+    .arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #f2f2f2;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0 10px; /* Add margin around the arrows */
+    }
+    
+    
+    
+    
+    .form {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .formControl {
+        width: 60%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        outline: none;
+        background-position: center;
+        display: block; 
+        margin: 0 auto; 
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    #quest1,#quest2,#quest3{
+        color: #bcae7d;
+        font-size: 1.2rem;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+    
+    
+    .checkbox {
+        margin-right: 10px;
+       display: none; /* Hide the default checkbox */
+        
+    }
+    
+    
+    
+    button[type="submit"] {
+        background-color: #4c2a83;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px; /* Add margin to push the button down */
+        display: block; /* Change the display property to block */
+        margin-left: auto; /* Center the button horizontally */
+        margin-right: auto; /* Center the button horizontally */
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #4c2a83;
+    }
+    
+    .options {
+        align-items: center;
+        margin: 0 20px; /* Add margin around the options */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+    
+    }
+    
+    .option {
+        margin-right: 60px;
+        margin-bottom: 60px; /* Add space between rows */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px; /* Adjust the width as needed */
+        height: 100px; /* Adjust the height as needed */
+        
+       
+    }
+    
+    p{
+        text-align: center;
+    }
+    footer{
+      margin-top: 900px;}
+
+
+
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+        
+          .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+        
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+        
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+        
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+        
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+
+    </style>
+    
+ 
+    
+
+   
+     
+</head>
+
+
+
+<body>
+
+
+    
+  
+    <div class="previous-info"></div>
+
+    <header>
+		
+          
+    
+        <div id="header">
+          
+          <img src="image/logo.png" alt="">
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Courses_Page.html">Courses</a></li>
+            <li><a href="tutor.html">Tutor</a></li>
+            <li><a href="adminPage.html">Administractor Dashboard</a></li>
+            <li class="dropdown">
+              <a class="active" href="parent.html" class="dropbtn">Parent Dashboard</a>
+              <div class="dropdown-content">
+              <a href="registerNewKid.html">Register a new child</a>
+              <a href="enrolmentPage.html">Course Enrollment</a>
+              <a href="EvaluationPage.html">Course Evaluation</a>
+              </div>
+              </li>
+            
+          </ul>              
+        
+          
+        </div>
+        
+      </header>
+
+      <script>
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          var themePreference = localStorage.getItem("themePreference");
+          
+          if (themePreference === "dark") {
+            document.body.classList.add("dark-theme");
+          }
+          else{
+            document.body.classList();
+          }
+        });
+            
+              
+              </script>
+
+
+  <form  class="ser" name="ser">
+    <div class="form-group">
+        <p id="quest1">Choose a kid :</p>
+        <select name="role" required id="dropdown1" class="formControl">
+            <option value disabled selected >Select</option>
+            <option value="c1">Ahmad</option>
+            <option value="c2">Lama</option>
+            <option value="c3">Sara</option>
+            <option value="c4">Noha</option>
+            <option value="c5">Lena</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <p id="quest2">Filter The Course:</p>
+        <select name="role" required id="dropdown2" class="formControl">
+            <option value disabled selected >Current Tutor</option>
+            <option value="n1">Emily Johnson</option>
+            <option value="n2">Daniel Smith</option>
+            <option value="n3">Sarah Ali</option>
+            <option value="n4">Hassan Tariq</option>
+            
+       
+        </select>
+        <br><br>
+        <select name="role" required id="dropdown3" class="formControl">
+            <option value disabled selected >Preerequisite</option>
+            <option value="c1">CSS--HTML</option>
+            <option value="c2">HTML</option>
+            <option value="c3">FIGMA--HTML,CSS</option>
+            <option value="c4">SQL--PYTHON</option>
+            <option value="c5">SCRATCH</option>
+            <option value="c6">JAVA--Python </option>
+            <option value="c7">PYTHON</option>
+            <option value="c8">JAVASCRIPT--html ,css</option>
+            <option value="c9">C++ --java</option>
+            
+        </select>
+    </div>
+
+    <br><br>
+           
+    <p id="quest3">Choose a course:</p><br>
+    <div class="container">
+        <div class="arrow left-arrow">&lt;</div>
+        <div class="options">
+            
+            <div class="option">
+                <input type="checkbox" id="option1" class="checkbox">
+                <label for="option1">
+                    <img src="image/C++.png" alt="Course 1">
+                </label>
+                <div class="course-name">JAVA</div>
+                
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="option2" class="checkbox">
+                <label for="option2">
+                    <img src="image/Java.png" alt="Course 2">
+                </label>
+                <div class="course-name">C++</div>
+            </div>
+            
+            <div class="option">
+                <input type="checkbox" id="option3" class="checkbox">
+                <label for="option3">
+                    <img src="image/Python.png" alt="Course 3">
+                </label>
+                <div class="course-name">PYTHON</div>
+            </div>
+            
+
+            <!-- Course 4: Scratch -->
+            <div class="option">
+                <input type="checkbox" id="option4" class="checkbox">
+                <label for="option4">
+                    <img src="image/Scratch.png" alt="Course 4">
+                </label>
+                <div class="course-name">SCRATCH</div>
+            </div>
+    
+            <!-- Course 5: JavaScript -->
+            <div class="option">
+                <input type="checkbox" id="option5" class="checkbox">
+                <label for="option5">
+                    <img src="image/JAVASCRIPT.PNG" alt="Course 5">
+                </label>
+                <div class="course-name">JAVASCRIPT</div>
+            </div>
+    
+            <!-- Course 6: HTML -->
+            <div class="option">
+                <input type="checkbox" id="option6" class="checkbox">
+                <label for="option6">
+                    <img src="image/HTML.png" alt="Course 6">
+                </label>
+                <div class="course-name">HTML</div>
+            </div>
+    
+            <!-- Course 7: CSS -->
+            <div class="option">
+                <input type="checkbox" id="option7" class="checkbox">
+                <label for="option7">
+                    <img src="image/CSS.png" alt="Course 7">
+                </label>
+                <div class="course-name">CSS</div>
+            </div>
+    
+            <!-- Course 8: SQL -->
+            <div class="option">
+                <input type="checkbox" id="option8" class="checkbox">
+                <label for="option8">
+                    <img src="image/sql.png" alt="Course 8">
+                </label>
+                <div class="course-name">SQL</div>
+            </div>
+    
+        </div>
+        <div class="arrow right-arrow">&gt;</div>
+    </div> <br>
+<div>
+    <button type="submit">Submit</button><br>
+</div>
+</form>
+      
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const coursesArray = [
+    { name: "Java", tutor: "Emily Johnson", prerequisite: "C++", image: "image/Java.png" },
+    { name: "C++", tutor: "Daniel Smith", prerequisite: "Java", image: "image/C++.png" },
+    { name: "Python", tutor: "Sarah Ali", prerequisite: "HTML", image: "image/Python.png" },
+    { name: "HTML", tutor: "Hassan Tariq", prerequisite: "", image: "image/HTML.png" },
+    { name: "CSS", tutor: "John Doe", prerequisite: "", image: "image/CSS.png" },
+    { name: "Scratch", tutor: "Jane Doe", prerequisite: "", image: "image/Scratch.png" },
+    { name: "JavaScript", tutor: "Mark Johnson", prerequisite: "HTML, CSS", image: "image/JavaScript.png" },
+    // Add more courses here
+  ];
+
+  const form = document.querySelector(".ser");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const childDropdown = document.getElementById("dropdown1");
+    const selectedChild = childDropdown.options[childDropdown.selectedIndex].text;
+
+    if (!selectedChild) {
+      alert("Please select a child.");
+      return;
+    }
+
+    const tutorDropdown = document.getElementById("dropdown2");
+    const selectedTutor = tutorDropdown.options[tutorDropdown.selectedIndex].text;
+
+    const prerequisiteDropdown = document.getElementById("dropdown3");
+    const selectedPrerequisite = prerequisiteDropdown.options[prerequisiteDropdown.selectedIndex].text;
+
+    const selectedCourses = Array.from(document.querySelectorAll(".option input[type='checkbox']:checked"))
+      .map((checkbox) => {
+        const courseName = checkbox.nextElementSibling.nextElementSibling.querySelector(".course-name").textContent;
+        return coursesArray.find((course) => course.name === courseName);
+      });
+
+    if (selectedCourses.length === 0) {
+      alert("Please select at least one course.");
+      return;
+    }
+
+    displayInformation(selectedChild, selectedCourses);
+    form.reset();
+  });
+
+  function displayInformation(child, courses) {
+    const previousInfoContainer = document.querySelector(".previous-info");
+    if (previousInfoContainer) {
+      previousInfoContainer.remove();
+    }
+
+    const infoContainer = document.createElement("div");
+    infoContainer.classList.add("previous-info");
+
+    const childNameElement = document.createElement("p");
+    childNameElement.textContent = Child: ${child};
+    infoContainer.appendChild(childNameElement);
+
+    courses.forEach((course) => {
+      const courseInfoElement = document.createElement("p");
+      courseInfoElement.textContent = Course: ${course.name}, Tutor: ${course.tutor}, Prerequisite: ${course.prerequisite};
+      infoContainer.appendChild(courseInfoElement);
+    });
+
+    const formContainer = document.querySelector(".ser");
+    formContainer.appendChild(infoContainer);
+  }
+});
+
+    });
+  </script>
+
+
+
+<div>
+    <footer>
+        <div class="footercontainer">
+            <div class="socialicon">
+            <a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+            <a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+            <a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+            <a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+            <a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+            </div>
+            <div class="footernav">
+        <ul>
+          <li><a href ="About-us.html">About Us</a></li>
+           <li><a href ="contact-us.html">Contact Us</a></li>
+
+        </ul>
+           </div>
+
+        <div class="fotterCopyright">
+            <hr>
+        <p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+      </div>
+      
+    </div>
+
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const coursesContainer = document.querySelector(".options");
+        const leftArrow = document.querySelector(".left-arrow");
+        const rightArrow = document.querySelector(".right-arrow");
+
+        let currentIndex = 0; // Track the current index of the displayed courses
+        const coursesPerPage = 4; // Number of courses to show per page
+
+        // Handle left arrow click
+        leftArrow.addEventListener("click", function () {
+            if (currentIndex > 0) {
+                currentIndex -= 1;
+                updateCoursesVisibility();
+            }
+        });
+
+        // Handle right arrow click
+        rightArrow.addEventListener("click", function () {
+            if (currentIndex < coursesContainer.children.length - coursesPerPage) {
+                currentIndex += 1;
+                updateCoursesVisibility();
+            }
+        });
+
+        function updateCoursesVisibility() {
+            const courses = coursesContainer.children;
+
+            // Loop through all courses and toggle their visibility based on the current index
+            for (let i = 0; i < courses.length; i++) {
+                courses[i].style.display = (i >= currentIndex && i < currentIndex + coursesPerPage) ? 'flex' : 'none';
+            }
+        }
+
+        // Initially, show the first set of courses
+        updateCoursesVisibility();
+    });
+</script>
+
+
+</body>
+
+
+
+</html>

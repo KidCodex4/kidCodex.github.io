@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KidCodex </title>
+    <link rel="StyleSheet" href="tutorcss.css" stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="nav_footer.css"/>
+
+    <style>
+      
+      .tutor img {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        background-color: transparent;
+      }
+      .stars img{
+        height:100px;
+        width:100px;
+        background-color: transparent;
+      }
+      .tutor p {
+      font-size: 20px; 
+    }
+    .tutor h3 {
+      font-size: 24px; 
+      margin-bottom: 24px;
+    }
+    
+          /* Dropdown styles */
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+        
+          .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+        
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+        
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+        
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+        
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+        
+          
+        
+
+    </style>
+</head>
+
+
+
+<body>
+
+  <header>
+		
+          
+    
+    <div id="header">
+      
+      <img src="image/logo.png" alt="">
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Courses_Page.html">Courses</a></li>
+        <li><a class="active" href="tutors.html">Tutors</a></li>
+        <li><a href="copyadmin.html">Administractor Dashboard</a></li>
+        <li class="dropdown">
+          <a  href="parent.html" class="dropbtn">Parent Dashboard</a>
+          <div class="dropdown-content">
+          <a href="register_child.html">Register a new child</a>
+          <a href="course_enrollment.html">Course Enrollment</a>
+          <a href="EvaluationPage.html">Course Evaluation</a>
+          </div>
+          </li>
+        
+      </ul>              
+    
+      
+    </div>
+    
+  </header>
+  
+
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var themePreference = localStorage.getItem("themePreference");
+    
+    if (themePreference === "dark") {
+      document.body.classList.add("dark-theme");
+    }
+    else{
+      document.body.classList();
+    }
+  });
+      
+        
+</script>
+	
+	
+     <form>
+      <h2 class="section-title">Our Tutors</h2>
+      <label id= "sort" for="sortOrder">Sort Order:</label>
+      <select id="sortOrder" onchange="sortTutors()">
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+    </form>
+
+      <br>
+    <div class="tutors-container" id="tutorsContainer">
+      <!-- Tutors' information will be displayed here dynamically using JavaScript -->
+    </div>
+
+   
+    <script>
+     
+      document.addEventListener("DOMContentLoaded", function() {
+        var tutorsData = [
+        { name: "T.Emily Johnson", topic: "Java,C++",   image: "image/tutorF.png",stars: "image/5stars.png"},
+        { name: "T.Daniel Smith", topic: "HTML,CSS,JS", image: "image/tutorM.png",stars:"image/5stars.png" },
+        { name: "T.Sarah Ali ", topic: "Scratch,Figma", image: "image/tutorF2.png",stars: "image/5stars.png"},
+        { name: "T.Hassan Tariq", topic: "Python, SQL", image: "image/tutorM2.png",stars: "image/5stars.png" }
+          
+          
+        ];
+  
+        displayTutors(tutorsData);
+      });
+  
+      function displayTutors(tutors) {
+        var tutorsContainer = document.getElementById("tutorsContainer");
+        tutorsContainer.innerHTML = "";
+        tutors.forEach(function(tutor) {
+          var tutorDiv = document.createElement("div");
+          tutorDiv.classList.add("tutor");
+  
+          tutorDiv.innerHTML = `
+        <img src="${tutor.image}" alt="${tutor.name}">
+        <h3>${tutor.name}</h3>
+        <p>Teaching topics: ${tutor.topic}</p>
+        
+          <img src="${tutor.stars}" alt="Stars">
+        </div>
+      `;
+  
+          tutorsContainer.appendChild(tutorDiv);
+        });
+      }
+  
+      function sortTutors() {
+        var sortOrder = document.getElementById("sortOrder").value;
+        var tutorsData = [
+        { name: "T.Emily Johnson", topic: "Java,C++"    , image: "image/tutorF.png",stars:"image/5stars.png"},
+          { name: "T.Daniel Smith", topic: "HTML,CSS,JS", image: "image/tutorM.png",stars:"image/5stars.png" },
+          { name: "T.Sarah Ali ", topic: "Scratch,Figma", image: "image/tutorF2.png",stars: "image/5stars.png"},
+          { name: "T.Hassan Tariq", topic: "Python, SQL", image: "image/tutorM2.png",stars:"image/5stars.png" }
+          
+        ];
+  
+        
+  
+        if (sortOrder === "asc") {
+          tutorsData.sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+          });
+        } else if (sortOrder === "desc") {
+          tutorsData.sort(function(a, b) {
+            return b.name.localeCompare(a.name);
+          });
+      }
+  
+  displayTutors(tutorsData);
+    }
+    </script>
+
+<div>
+  <footer>
+    <div class="footercontainer">
+      <div class="socialicon">
+      <a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+      <a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+      <a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+      <a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+      <a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+      </div>
+      <div class="footernav">
+    <ul>
+      <li><a href ="About-us.html">About Us</a></li>
+       <li><a href ="contact-us.html">Contact Us</a></li>
+
+    </ul>
+      </div>
+       
+
+    <div class="fotterCopyright">
+      <hr>
+    <p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+    </div>
+    
+  </div>
+
+  </footer>
+</div>
+   
+</body>
+
+</html>
+
+
+      
+     
+

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidCodex </title>
+    <link rel="StyleSheet" href="registerNewKidcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="registernewkidjs.js"></script>
+    <link rel="stylesheet" href="nav_footer.css"/>
+    <style>
+      .div{
+        color: #281f8b;;
+      }
+      legend{ 
+      border: 1px solid #ccc; /* Add border styling*/
+      border-radius: 8px;
+      }
+     
+     
+      
+    input[type="submit"] {
+    
+      cursor: pointer;
+      width: 40;
+      font-size: 15px; /* Adjust the font size as needed */
+      padding: 10px 10px; /* Adjust the padding as needed */
+      background-color: #4c87af;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    button[type="button"] {
+    
+    cursor: pointer;
+    font-size: 15px;
+    width: 40; 
+    padding: 10px 10px;
+      background-color: #4c87af;
+      color: white;
+      border: none;
+      border-radius: 4px;
+  }
+  input[type="submit"]:hover,
+        button[type="button"]:hover {
+            background-color: #356094;
+        }
+        .form {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+  <header>
+		
+          
+    
+    <div id="header">
+      
+      <img src="image/logo.png" alt="">
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Courses_Page.html">Courses</a></li>
+        <li><a href="tutor.html">Tutor</a></li>
+        <li><a href="adminPage.html">Administractor Dashboard</a></li>
+        <li class="dropdown">
+          <a class="active" href="copyadmin.html" class="dropbtn">Parent Dashboard</a>
+          <div class="dropdown-content">
+          <a href="registerNewKid.html">Register a new child</a>
+          <a href="enrolmentPage.html">Course Enrollment</a>
+          <a href="EvaluationPage.html">Course Evaluation</a>
+          </div>
+          </li>
+        
+      </ul>              
+    
+      
+    </div>
+    
+       </header>
+
+ 
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var themePreference = localStorage.getItem("themePreference");
+    
+    if (themePreference === "dark") {
+      document.body.classList.add("dark-theme");
+    }
+    else{
+      document.body.classList();
+    }
+  });
+      
+        
+        </script>
+ 
+
+  
+	
+
+  <form id="childRegistrationForm" onsubmit="validateForm(event)">
+    <div id="successMessage" style="display: none; color: green;">
+      Your child has been registered successfully!
+    </div>
+    
+    </script>
+    <fieldset>
+      <legend><h2>Child registeration Form</h2></legend>
+      <br>
+      
+    <h3>Personal Information</h3>
+    
+  
+    <div class="upload">
+      
+      <img src="image/noprofile.jpg" id="profile-pic" width=100 height=100 alt="profilePic">
+      <label for="input-file"></label>
+      <div class="round">
+        <input type="file"accept="image/jpeg,image/png,image/jpg"id="input-file">
+        <i class="fa fa-camera" style="color:#fff;"></i>
+       <script>
+        let profilepic=document.getElementById("profile-pic");
+        let inputfile=document.getElementById("input-file");
+        inputfile.onchange=function(){
+          profilepic.src=URL.createObjectURL(inputfile.files[0]);
+        }
+       </script>
+  
+      </div>
+    </div>
+     <br>
+      
+   <li>
+    <label for="childName">Child's Name:</label>
+    <input type="text" id="childName" name="childName" required>
+  </li>
+    <br>
+    <br>
+  <li>
+    <label for="childDOB">Date of Birth:</label>
+    <input type="date" id="childDOB" name="childDOB" required>
+  </li>
+    <br>
+    <br>
+    <li>
+      <label>Gender:</label>
+      <input type="radio" name="Gender" value="Male"> Male  
+      <input type="radio" name="Gender" value="Female"> Female
+  </li>
+   
+  <br>
+  <br>
+    <h3>Contact Information</h3>
+    <br>
+    <br>
+  
+    <li>
+      <label for="childPhoneNumber">Phone Number:</label>
+    <input type="tel" id="childPhoneNumber" name="childPhoneNumber" pattern="[0-9]{10}" required>
+  </li>
+      <br>
+    <br>
+    <li>
+      <label for="childEmail">Email:</label>
+    <input type="text" id="childEmail" name="childEmail"  required>
+  </li>
+    <br>
+    <br>
+    <br>
+  
+    <input type="submit" value="Submit">
+     <button type="button" onclick="pagePrint()">Print</button>
+    <script>
+     function pagePrint() {
+            // Retrieve child information
+            const childName = document.getElementById('childName').value;
+            const childDOB = document.getElementById('childDOB').value;
+            const childGender = document.querySelector('input[name="Gender"]:checked').value;
+            const childPhoneNumber = document.getElementById('childPhoneNumber').value;
+            const childEmail = document.getElementById('childEmail').value;
+
+            // Create a new window
+            var printWindow = window.open("", "_blank");
+
+            // Build HTML content for child information
+            var printContent = `
+                <html>
+                    <head>
+                        <title>Child Information</title>
+                    </head>
+                    <body>
+                        <h2>Child Information</h2>
+                        <img src="${document.getElementById('profile-pic').src}" alt="Child Image" width="100" height="100">
+                        <p><strong>Name:</strong> ${childName}</p>
+                        <p><strong>Date of Birth:</strong> ${childDOB}</p>
+                        <p><strong>Gender:</strong> ${childGender}</p>
+                        <p><strong>Phone Number:</strong> ${childPhoneNumber}</p>
+                        <p><strong>Email:</strong> ${childEmail}</p>
+                       
+                </html>
+            `;
+
+            // Write content to the new window and print
+            printWindow.document.write(printContent);
+            printWindow.document.close();
+
+            // Make the print window pop up
+            printWindow.onload = function() {
+                printWindow.print();
+                printWindow.close();
+            };
+        }
+    </script>
+  </fieldset>
+  </form>
+  
+  
+                  <!-- Section to display child information -->
+  <div id="childInformation" style="display: none;">
+    <h2>Child Information</h2>
+    <p id="childNameDisplay"></p>
+    <p id="childDOBDisplay"></p>
+    <p id="childPhoneNumberDisplay"></p>
+  </div>
+  
+                  
+                  <script>
+                    function validateForm(event) {
+                      event.preventDefault(); // Prevent form submission
+                  
+                      const childName = document.getElementById('childName').value;
+                      const childDOB = document.getElementById('childDOB').value;
+                      const childPhoneNumber = document.getElementById('childPhoneNumber').value;
+                  
+                      // Check for empty fields
+                      if (!childName || !childDOB || !childPhoneNumber||!childEmail) {
+                        alert('Please fill in all fields.');
+                        return;
+                      }
+                  
+                      // Check if child's name starts with a number
+                      if (/^\d/.test(childName)) {
+                        alert('Child\'s name cannot start with a number.');
+                        return;
+                      }
+                  
+                      // Check if the phone number has 10 digits
+                      if (!/^\d{10}$/.test(childPhoneNumber)) {
+                        alert('Phone number should have exactly 10 digits.');
+                        return;
+                      }
+                  
+                      // Check if the child is older than 6 years (DOB not after 2017)
+                      const childDOBDate = new Date(childDOB);
+                      const currentYear = new Date().getFullYear();
+                      if (childDOBDate.getFullYear() > (currentYear - 6)) {
+                        alert('Children younger than 6 years old are not accepted.');
+                        return;
+                      }
+                  
+                      // If the form is valid, store the child's name in local storage
+                      localStorage.setItem('childName', childName);
+
+                      // Reset the form fields
+                      document.getElementById('childRegistrationForm').reset();
+                  
+                      // Additional logic to print child information or navigate to another page
+                      // ...
+                  
+                     
+                      console.log('Child Information:');
+                      console.log('Name:', childName);
+                      console.log('Date of Birth:', childDOB);
+                      console.log('Phone Number:', childPhoneNumber);
+                      alert('Your child has been registered successfully!');
+                    }
+                  </script>
+
+
+<div>
+  <footer>
+    <div class="footercontainer">
+      <div class="socialicon">
+      <a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+      <a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+      <a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+      <a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+      <a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+      </div>
+      <div class="footernav">
+    <ul>
+      <li><a href ="About-us.html">About Us</a></li>
+       <li><a href ="contact-us.html">Contact Us</a></li>
+
+    </ul>
+       </div>
+
+    <div class="fotterCopyright">
+      <hr>
+    <p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+    </div>
+    
+  </div>
+
+  </footer>
+</div>
+        
+
+
+</body>       
+</html>
+
+

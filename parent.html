@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>KIDCODEX ParentDashboard</title>
+    <link rel="StyleSheet" href="nav_footer.css">
+
+    <link rel="stylesheet" href="E.css">
+    
+
+    <style> /*  nav */
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Spartan",sans-serif;
+        }
+        
+          body{
+            background-color:var(--backgroundcolor);
+          }
+          
+        #header{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px 80px;
+          background:var(--navcolor);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+          z-index: 999;
+          position:sticky;
+          top: 0;
+          left: 0;
+          color: var(--navtxt);
+         
+        
+        }
+        
+        #header img {
+          background-color: transparent; 
+        
+        }
+        
+        
+        
+        #navbar{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background:var(--navcolor);
+          color: var(--navtxt);
+        }
+        
+        #navbar li{
+          list-style: none;
+          padding:0 20px;
+          position: relative;
+          background:var(--navcolor);
+          color: var(--navtxt);
+        }
+        
+        #navbar li a{
+          text-decoration: none;
+          font-size:16px ;
+          font-weight: 600;
+          color: black;
+          transition: 0.3s;
+          background:var(--navcolor);
+          color: var(--navtxt);
+          
+        }
+        #navbar li a:hover{
+          
+          color: grey;
+          
+        }
+        #navbar li a.active{
+          
+          color: grey;
+        
+        }
+        #navbar li a.active::after,
+        #navbar li a:hover::after{
+          content:"";
+          width:50%;
+          height:2.5px ;
+          background:grey;
+          position: absolute;
+          bottom: -4px;
+          left: 20px;
+          
+        }
+        /*theme change*/
+        #icon{
+          width:30px;
+          cursor: pointer;
+        }
+        
+        nav ul{
+          flex: 1;
+         /*text-align: right;*/
+        }
+        
+        :root{
+          
+        --backgroundcolor:whitesmoke ;
+        --navcolor:#E3E6F3;
+        --footercolor:#E3E6F3;
+        --navtxt:black;
+        
+        
+        }
+        .dark-theme{
+         
+          --backgroundcolor:#0d3e70;
+          --navcolor:#013466;
+          --footercolor:#013466;
+          --navtxt:white;
+        
+          
+        
+        }
+         
+        /* iPad */
+        @media (max-width: 1024px) {
+          #header {
+            padding: 20px 40px;
+          }
+        }
+        
+        /* iPhone */
+        @media (max-width: 768px) {
+          #header {
+            padding: 10px 20px;
+          }
+        }
+        
+        
+         
+         
+         
+         
+         /*  footer */
+         
+         footer{
+                background-color:var(--footercolor);
+          
+              }
+              
+              .footercontainer{
+                width: 100%;
+                background-color:var(--footercolor);
+            }
+              .socialicon{display: flex;
+                  justify-content: center;
+                  background-color:var(--footercolor);}
+        
+                  .socialicon img{
+                    background-color:var(--footercolor);}
+              
+                  .socialicon a{
+                      text-decoration:none ;
+                      padding: 10px;
+                      background-color:var(--footercolor);
+                      border-radius: 50%;
+                      font-size: 2em;
+                      color: black;
+                      opacity: 0.9;
+                  }
+                  
+                  .socialicon a:hover{
+                    background-color: var(--footercolor);
+                   transition:0.5s;
+                  }
+              
+                  .footernav{
+                    margin:20px ;
+                    background-color:var(--footercolor);
+                }
+        
+                .footernav ul li{
+                    display: flex;
+                    justify-content: center;
+                    background-color:var(--footercolor);
+                    list-style-type: none;
+                }
+              
+                  .footernav ul{
+                      display: flex;
+                      justify-content: center;
+                      background-color:var(--footercolor);
+                      list-style-type: none;
+                  }
+                  .footernav ul li a{
+                    color:var(--navtxt) ;
+                    margin: 20px; ;
+                    text-decoration: none;
+                    font-size: 1.3em;
+                    opacity: 0.7;
+                    transition: 0.5s}
+                
+                    .footernav ul li a:hover{
+                        opacity: 1;
+                        color: lightgrey;
+                    }
+                
+                    .fotterCopyright{
+                        background-color:var(--footercolor);
+                        padding: 20px;
+                        text-align:center;
+                        text-decoration: none;
+                        
+                
+                    }
+        
+                    .fotterCopyright p{ 
+                        background-color: var(--footercolor);
+                    color:var(--navtxt);
+                    text-decoration: none;}
+        
+                    
+                          
+                      
+                     
+                          
+                        
+                         
+                      
+                    
+                    
+                @media(max-width:700px){
+                    .footernav ul{flex-direction: column}
+                    .footernav ul li{
+                    width: 700px;
+                    text-align: center;
+                    margin: 10px;
+                    background-color:var(--navcolor);
+                    }
+                
+                    
+                  }
+                
+                 .buttons{
+                     background-color: var(--navcolor);
+                    } 
+        
+              .buttons a {
+                text-decoration: none;
+                color:black;
+                font-size: 1rem;
+                padding: 30px 0;
+                transition: 0.2s ease;
+                background-color:var(--navcolor);
+        
+              }
+             /* iPad */
+        @media (max-width: 1024px) {
+          #header {
+            padding: 20px 40px;
+          }
+          #navbar li {
+            padding: 0 10px;
+          }
+          #navbar li a {
+            font-size: 14px;
+          }
+        }
+        
+        /* iPhone */
+        @media (max-width: 768px) {
+          #header {
+            padding: 10px 20px;
+          }
+          #navbar {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          #navbar li {
+            padding: 10px;
+          }
+        }
+        
+    
+    
+    
+    
+    
+    
+    /* Styles for the nested navbar */
+       .nested-navbar {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            z-index: 1;
+            width: 100%; /* Set the width to 100% */
+        }
+        
+        .Parent_Dashboard:hover .nested-navbar {
+            display: block;
+        }
+        
+        .nested-navbar a {
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nested-navbar a:hover {
+            background-color: #f2f2f2;
+        }
+        
+        
+        .form-group{
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
+        }
+        .formControl{
+            display: block;
+            width: 100%;
+            height: 1.8rem;
+            padding: 0.375rem 0.75rem;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+        }
+        
+        
+        
+        
+        .scroll-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            overflow-x: hidden; /* Hide the horizontal scrollbar */
+            white-space: nowrap;
+            position: relative;
+        }
+        
+        .container {
+            display: inline-flex;
+            padding: 0 60px; /* Adjust the padding as needed */
+            transition: transform 0.3s ease; /* Smooth transition for scrolling */
+        
+        
+        
+        }
+        
+        
+        .section {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            background-color: #f2f2f2;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px; /* Soften the edges */
+            padding-top: 10px;
+        
+            
+        }
+        
+        .section-heading{
+            color: #bcae7d;}
+        
+        .scroll-arrow {
+            width: 40px;
+            height: 40px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1; /* Ensure arrows appear above sections */
+        }
+        
+        .left-arrow {
+            left: 10px;
+        }
+        
+        .right-arrow {
+            right: 10px;
+        }
+        
+        .profile-picture {
+            width: 80px; /* Set the width of the small profile picture */
+            height: 80px; /* Set the height of the small profile picture */
+            border-radius: 50%; /* Make the profile picture circular */
+            object-fit: cover; /* Ensure the image covers the specified dimensions */
+            margin-bottom: 10px; /* Optional: Add margin if needed */
+            display: block; /* Ensure the image is displayed as a block element */
+           
+        
+        }
+        
+        .section-content {
+            position: absolute;
+            bottom: 10px; /* Adjust the bottom value to move the content up or down */
+            /* Add any styles you want for the content inside the section */
+        }
+        
+        .content{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri , 'Trebuchet MS', sans-serif;
+            color: #bcae7d;
+            text-align: center; }
+
+
+
+            
+          /* Dropdown styles */
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+        
+          .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+        
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+        
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+        
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+        
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+            
+            
+            </style>
+
+
+
+<body>
+    <header>
+		
+          
+    
+        <div id="header">
+          
+          <img src="image/logo.png" alt="">
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Courses_Page.html">Courses</a></li>
+            <li><a href="tutor.html">Tutor</a></li>
+            <li><a href="copyadmin.html">Administractor Dashboard</a></li>
+            <li class="dropdown">
+              <a class="active" href="copyadmin.html" class="dropbtn">Parent Dashboard</a>
+              <div class="dropdown-content">
+              <a href="registerNewKid.html">Register a new child</a>
+              <a href="enrolmentPage.html">Course Enrollment</a>
+              <a href="EvaluationPage.html">Course Evaluation</a>
+              </div>
+              </li>
+            
+          </ul>              
+        
+          
+        </div>
+        
+      </header>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var themePreference = localStorage.getItem("themePreference");
+    
+            if (themePreference === "dark") {
+                document.body.classList.add("dark-theme");
+            } else {
+                document.body.classList.remove("dark-theme");
+            }
+    
+            // Check if children names are already displayed
+            var container = document.querySelector(".container");
+    
+            if (container.innerHTML.trim() === "") {
+                // If the container is empty, execute the logic to display children names
+                var childrenNames = localStorage.getItem("childrenNames");
+    
+                if (!childrenNames) {
+                    // If no children names in local storage, save and display default names
+                    var defaultNames = ["elaf turkie", "fajar sultan"];
+                    localStorage.setItem("childrenNames", JSON.stringify(defaultNames));
+                    displayChildren(defaultNames);
+                } else {
+                    // If children names exist in local storage, retrieve and display them
+                    var storedNames = JSON.parse(childrenNames);
+                    displayChildren(storedNames);
+                }
+    
+                function displayChildren(names) {
+                    // Create sections for each child
+                    names.forEach(function (name) {
+                        var section = document.createElement("div");
+                        section.classList.add("section");
+    
+                        var img = document.createElement("img");
+                        img.src = "image/default-profile-picture.jpg"; // Set default image path
+                        img.alt = "Profile Picture";
+                        img.classList.add("profile-picture");
+    
+                        var content = document.createElement("div");
+                        content.classList.add("section-content");
+    
+                        var heading = document.createElement("h2");
+                        heading.classList.add("section-heading");
+                        heading.textContent = name;
+    
+                        content.appendChild(heading);
+    
+                        section.appendChild(img);
+                        section.appendChild(content);
+    
+                        container.appendChild(section);
+                    });
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          var themePreference = localStorage.getItem("themePreference");
+          
+          if (themePreference === "dark") {
+            document.body.classList.add("dark-theme");
+          }
+          else{
+            document.body.classList();
+          }
+        });
+            
+              
+              </script>
+
+
+
+
+
+<script>
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var themePreference = localStorage.getItem("themePreference");
+      
+      if (themePreference === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+    });
+        
+          
+          </script>
+
+
+
+    <div class="content">
+        <br>
+        <h2>Parent Dashboard </h2>
+        <br>
+       <h3 >There is your kids names</h3>
+       
+    </div>
+     <br><br><br>
+
+    <div class="scroll-container">
+        <div class="scroll-arrow left-arrow">&lt;</div>
+        <div class="container" id="childrenContainer">
+            <div class="section" >
+                <div>
+                <img src="image/girl10.jpeg" alt="Profile Picture" class="profile-picture"><br><br>
+            </div>
+            <div class="section-content">
+                <h2 class="section-heading">elaf turkie</h2>
+                <!-- Other content inside the section, if any -->
+                 </div>
+            </div>
+
+
+            <div class="section" >
+                <div>
+                    <img src="image/girl2.jpg" alt="Profile Picture" class="profile-picture"><br><br>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-heading">fajar sultan</h2>
+                    <!-- Other content inside the section, if any -->
+                </div>
+            </div>
+
+            <div class="section" >
+                <div>
+                    <img src="image/girl3.jpg" alt="Profile Picture" class="profile-picture"><br><br>
+                </div>
+
+                 <div class="section-content">
+            <h2 class="section-heading">rawan saad</h2>
+            <!-- Other content inside the section, if any -->
+        </div>
+            </div>
+
+            <div class="section" >
+                <div>
+                    <img src="image/girl1.jpg" alt="Profile Picture" class="profile-picture"><br><br>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-heading">ala khaled</h2>
+                    <!-- Other content inside the section, if any -->
+                </div>
+            </div>
+
+            <div class="section" >
+                <div>
+                    <img src="image/girl4.jpg" alt="Profile Picture" class="profile-picture"><br><br>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-heading">reem naif</h2>
+                    <!-- Other content inside the section, if any -->
+                </div>
+            </div>
+            
+        </div>
+        <div class="scroll-arrow right-arrow">&gt;</div>
+    </div><br><br>
+
+
+    
+    
+    <div>
+        <footer>
+            <div class="footercontainer">
+                <div class="socialicon">
+                <a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+                <a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+                <a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+                <a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+                <a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+                </div>
+                <div class="footernav">
+            <ul>
+              <li><a href ="About-us.html">About Us</a></li>
+               <li><a href ="contact-us.html">Contact Us</a></li>
+    
+            </ul>
+               </div>
+    
+            <div class="fotterCopyright">
+                <hr>
+            <p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+          </div>
+          
+        </div>
+    
+        </footer>
+    </div>
+	
+    
+</body>
+
+</html>

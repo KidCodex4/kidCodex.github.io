@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>KidCodex-AdminPage</title>
+        <link rel="stylesheet" href="E.css">
+        <link rel="stylesheet" href="theCopy.css">
+		<link rel="StyleSheet" href="nav_footer.css">
+
+		
+	<style>
+          
+        
+          /* Dropdown styles */
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+        
+          .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+        
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+        
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+        
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+        
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+        
+          
+</style>
+
+    </head>
+
+  <body>
+  <header>
+		
+          
+    
+                  <div id="header">
+                    
+                    <img src="image/logo.png" alt="">
+                    <ul id="navbar">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="Courses_Page.html">Courses</a></li>
+                      <li><a href="tutor.html">Tutor</a></li>
+                      <li><a class="active" href="copyadmin.html">Administractor Dashboard</a></li>
+                      <li class="dropdown">
+                        <a  href="parent.html" class="dropbtn">Parent Dashboard</a>
+                        <div class="dropdown-content">
+                        <a href="registerNewKid.html">Register a new child</a>
+                        <a href="enrolmentPage.html">Course Enrollment</a>
+                        <a href="EvaluationPage.html">Course Evaluation</a>
+                        </div>
+                        </li>
+                      
+                    </ul>              
+                  
+                    
+                  </div>
+                  
+         </header>
+ 
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var themePreference = localStorage.getItem("themePreference");
+  
+  if (themePreference === "dark") {
+    document.body.classList.add("dark-theme");
+  }
+  else{
+    document.body.classList();
+  }
+});
+    
+      
+</script>
+
+ <!-- MY PAGE -->
+
+
+ <div  id="admin">
+ 
+ 
+ 
+ <div id="CouresKids" >
+ 
+ 
+<div class="regKids">
+        <div class="title">Registered Kids</div>
+        <div class="scroll-box">
+        <div class="listContainer">
+		<ul  class="list"> 
+				
+					<li>sara mohammed</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+					 <li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>waad alrutki</li>
+					<li>shouq hamad</li>
+					<li>nora altaweel</li>
+					<li>dema saleh</li>
+					<li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>lena barrak</li>
+                    <li>elaf turkie</li>
+					<li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>mashael mohammed</li>
+
+					
+                </ul>
+ 		<ul  class="list">
+                    <li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>waad alrutki</li>
+					<li>sara mohammed</li>
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li>reem naif</li>
+					<li>rawan saad</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li>nora altaweel</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>mashael mohammed</li>
+					<li>lena barrak</li>
+                    <li>elaf turkie</li>
+                    <li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+                </ul>
+				<ul   class="list"> 
+					
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+					<li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>lena barrak</li>
+                    <li>elaf turkie</li>
+                    <li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>waad alrutki</li>
+					<li>sara mohammed</li>
+					<li>shahad abdullah</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li>nora altaweel</li>
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>reem naif</li>
+					<li>rawan saad</li>
+					<li>mashael mohammed</li>
+                </ul>
+ 		<ul  class="list">
+					<li>nora altaweel</li>
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li>reem naif</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					 <li>hend salman</li>
+                    <li>hanan salman</li>
+					<li>rawan saad</li>
+					<li>mashael mohammed</li>
+					<li>lena barrak</li>
+                    <li>elaf turkie</li>
+                    <li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li>waad alrutki</li>
+					<li>sara mohammed</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+                </ul>
+				<ul  class="list"> 
+					<li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li>lena barrak</li>
+                    <li>elaf turkie</li>
+                    <li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>waad alrutki</li>
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li>reem naif</li>
+					<li>rawan saad</li>
+					<li>mashael mohammed</li>
+					<li>sara mohammed</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+					<li>nora altaweel</li>
+					
+                </ul>
+ 		<ul  class="list">
+		<li>fajar sultan</li>
+					<li>refal alammari</li>
+					<li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>waad alrutki</li>
+					<li>sara mohammed</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+                    <li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li>nora altaweel</li>
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li>reem naif</li>
+					<li>rawan saad</li>
+					<li>mashael mohammed</li>
+					<li>lena barrak</li>
+                    <li>elaf turkie</li>
+                    <li>ala khaled</li>
+					
+                </ul>
+
+        </div>
+    </div>
+	</div>
+
+    
+        <div class="Courses">
+        <div class="title">Courses</div>
+     <div class="scroll-box" >
+	 <div class="listContainer" id="coursesBoxes" >
+	 <!--****************firt div list****************-->
+	 	 <ul class="list">  
+
+       <li><div class="totalCourse">
+            <h2>Java</h2>
+            <p>dr:Hanouf Alshehri</p>
+            <div class="course">
+                <ul id="s1" class="list">
+				<li>lena barrak</li>
+                    <li>elaf turkie</li>
+                    <li>ala khaled</li>
+					<li>fajar sultan</li>
+					<li>refal alammari</li>
+					<li class="hidden">shojoun matar</li>
+					<li class="hidden">layan fahad</li>
+					<li class="hidden">waad alrutki</li>
+					
+                </ul>
+                <ul id="s2"  class="list"> 
+                   
+					<li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li class="hidden">nora altaweel</li>
+					<li class="hidden">dema saleh</li>
+					<li class="hidden">munira fahad</li>
+				
+                </ul>
+				
+            </div>
+					<button id="moreButton">More</button>
+            </div>
+
+		                                    </li>
+		 <!--*************************-->
+    <li>
+      <div class="totalCourse">
+            <h2>Scratch</h2>
+            <p>dr:dara khaled</p>
+            <div class="course">
+                <ul id="s3"  class="list">
+				    <li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li>reem naif</li>
+					<li>rawan saad</li>
+                    <li>hend salman</li>
+               
+				
+                </ul>
+                <ul id="s4" class="list"> 
+                   <li>shojoun matar</li>
+					<li>deem alqassem</li>
+					<li>waad alrutki</li>
+					<li>sara mohammed</li>
+					<li>lena barrak</li>
+                   
+                </ul>
+            </div>
+        </div>
+		                                    </li>
+     		 <!--****************-->
+     <li>
+		 <div class="totalCourse">
+            <h2>HTML&amp;CSS</h2>
+            <p>dr:nora saad</p>
+            <div class="course">
+                <ul id="s5" class="list">
+                    <li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					 
+					<li class="hidden3">hend salman</li>
+                    <li class="hidden3">hanan salman</li>
+                    <li class="hidden3">lena barrak</li>
+					<li class="hidden3">wasaif abdullah</li>
+					<li class="hidden3">shouq hamad</li>
+                </ul>
+                <ul  id="s6" class="list"> 
+                  
+				   <li>sara mohammed</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>fajar sultan</li>
+				    <li >hend salman</li>
+                    <li class="hidden3">hanan salman</li>
+                    <li class="hidden3">lena barrak</li>
+					<li class="hidden3">wasaif abdullah</li>
+					<li class="hidden3">shouq hamad</li>
+                </ul>
+            </div>
+					<button id="moreButton3">More</button>
+
+        </div>
+		                                      </li></ul>
+											  
+											  
+											  
+		 <!--****************second div list****************-->
+ 
+     <ul class="list"> 
+       <li><div class="totalCourse" >
+            <h2>Figma</h2>
+            <p>dr:haya ali</p>
+            <div id="s7"  class="course">   
+                <ul   class="list">
+					<li>nora altaweel</li>
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li >reem naif</li>
+					<li class="hidden2">rawan saad</li>
+					<li class="hidden2">mashael ali</li>
+					 <li class="hidden2">hend salman</li>
+                   
+                </ul>
+                <ul  id="s8" class="list"> 
+                   
+				   <li>wed ali</li>
+					<li>waad alrutki</li>
+					<li>sara omar</li>
+					<li>waffa nasser</li>
+					<li >shadad fahad</li>
+					<li class="hidden2">lena barrak</li>
+                    <li class="hidden2">elaf turkie</li>
+                   
+                </ul>
+									
+
+            </div>
+			<button id="moreButton2">More</button>
+        </div>
+		                                    </li>
+		 <!--****************-->
+    <li>
+      <div class="totalCourse">
+            <h2>CSS</h2>
+            <p>dr:sara khaled</p>
+            <div class="course">
+                <ul  id="s9" class="list">
+				    <li>munira fahad</li>
+					<li>shahad abdullah</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li>nora altaweel</li>
+					<li>dema saleh</li>
+				
+					
+					
+				
+                </ul>
+                <ul  id="s10"  class="list"> 
+                   <li>sara mohammed</li>
+					<li>waffa nasser</li>
+					<li>shadad fahad</li>
+					<li>abrar ommar</li>
+				
+					
+                </ul>
+            </div>
+        </div>
+		                                    </li>
+     		 <!---****************-->
+     <li>
+		 <div class="totalCourse">
+            <h2>Python</h2>
+            <p>dr:ameera nasser</p>
+            <div class="course">
+                <ul  id="s11" class="list">
+                    <li>hend salman</li>
+                    <li>hanan salman</li>
+                    <li>lena barrak</li>
+					<li>wasaif abdullah</li>
+					<li>shouq hamad</li>
+					<li class="hidden4">nora altaweel</li>
+					<li class="hidden4">rawan saad</li>
+					<li class="hidden4">ala fahad</li>
+					<li class="hidden4">lena barrak</li>
+                    <li class="hidden4">elaf turkie</li>
+                 
+                </ul>
+				
+				
+                <ul  id="s12" class="list"> 
+                   
+					<li>dema saleh</li>
+					<li>munira fahad</li>
+					<li>shahad ali</li>
+					<li>reem naif</li>
+					<li>lena barrak</li>
+                    <li class="hidden4">elaf turkie</li>
+					<li class="hidden4">waad alrutki</li>
+					<li class="hidden4">sara omar</li>
+					<li class="hidden4">waffa nasser</li>
+					<li class="hidden4">shadad fahad</li>
+			
+					
+                </ul>
+            </div>
+				<button id="moreButton4">More</button>
+
+        </div>
+		                                      </li></ul>
+									
+									
+			</div>	  
+											  
+											 
+											  
+    </div><!--******************************** scroll box********************************-->
+	</div><!--******************************** Courses********************************-->
+	</div><!--********************************Coures&kids********************************-->
+
+     
+	 <div  id="tutorsBox">
+	 <div class="title">Tutors</div>
+	 <br><br>
+	<div class="tutors">
+	
+	 <br><br>
+	
+	<div class="tut" >
+	<a href="Schedule1.html"><h3>Emily Johnson</h3></a>
+    <div class= "cn" >
+	<pre>- Java         - C++</pre>
+	</div>
+	</div>
+	
+	<br><br>
+	<br><br>
+	  
+	<div class="tut" >    
+	<a href="Schedule2.html"><h3>Daniel Smith</h3></a>
+    <div class= "cn" >
+	<pre>- Web Design</pre>
+	</div>
+	</div>
+	
+	<br><br>
+	<br><br>
+	
+	<div class="tut" > 
+	<a href="Schedule3.html"><h3>Sarah Ali</h3></a>
+    <div class= "cn" >
+	<pre>- Scratch      - Figma</pre>
+	</div>
+	</div>
+	
+	<br><br>
+	<br><br>
+	
+	<div class="tut" >
+		<a href="Schedule4.html"><h3>Hassan tariq</h3></a>
+    <div class= "cn" >
+	<pre>- Python</pre>
+	</div>
+	</div>
+	
+	<br><br>
+
+	
+	
+	</div><!--************tut************-->
+	
+</div> 	<!--************tutBox************-->
+		
+		
+		
+		
+		
+    </div>
+              <!-- MY PAGE -->
+
+  
+		
+	<div>
+		<footer>
+			<div class="footercontainer">
+				<div class="socialicon">
+				<a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+				<a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+				<a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+				<a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+				<a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+				</div>
+				<div class="footernav">
+			<ul>
+			  <li><a href ="About-us.html">About Us</a></li>
+			   <li><a href ="contact-us.html">Contact Us</a></li>
+	
+			</ul>
+			   </div>
+	
+			<div class="fotterCopyright">
+				<hr>
+			<p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+		  </div>
+		  
+		</div>
+	
+		</footer>
+	</div>
+	
+           
+		   
+<script src="copyJS.js"></script>
+       </body>
+       
+       </html>                      

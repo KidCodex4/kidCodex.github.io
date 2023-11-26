@@ -1,0 +1,183 @@
+*{
+  color:  #bcae7d;;
+}
+header{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+  head{
+    height:auto ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+  }
+  nav{
+    width: 1615px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  }
+  nav label{
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: black;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  nav label:hover{
+  background: rgba(68, 117, 173, 0.906);
+  }
+  nav label i{
+    margin-right: 5px;
+  }
+  nav .slider{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: rgba(68, 117, 173, 0.906);;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1;
+  }
+  #Home:checked ~ nav label.home,
+  #Courses:checked ~ nav label.Courses,
+  #Tutors:checked ~ nav label.Tutors,
+  #Administractor:checked ~ nav label.Administractor_Dashboard,
+  #Parent_Dashbord:checked ~ nav label.Parent_Dashbord{
+    color: #fff;
+  }
+  #Courses:checked ~ nav .slider{
+  left: 20%;
+  }
+  #Tutors:checked ~ nav .slider{
+  left: 40%;
+  }
+  #Administractor_Dashboard:checked ~ nav .slider{
+  left: 60%;
+  }
+  #Parent_Dashboard:checked ~ nav .slider{
+  left: 80%;
+  }
+
+  .tutor {border-style:outset;
+    border-color:lightgrey;
+    border-radius:20px
+    
+ } 
+  input[type=radio]{
+    display: none;
+  }
+ 
+  .tutor-profile.details{
+    background-color:var(--white) ;
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+  }   
+  .tutor-profile.details.tutor {
+    margin-bottom:2rem ;
+  }
+  .tutor-profile.details.tutor img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+  }
+  .tutor-profile.details.tutor h3{
+    font-size: 2rem;
+    color: var(--black);
+    margin: .5rem 0;
+  }
+  .tutor-profile.details.tutor span{
+    font-size: 1.5rem;
+    color:var(--light-color);
+  }
+  .tutor-profile.details.tutor.flex{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .tutor-profile.details.tutor.flex p{
+    flex:1 1 25rem;
+    border-radius: .5rem;
+    background-color:var(--light-color) ;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: var(--light-color);
+  }
+  .tutor-profile.details.tutor.flex p span{
+    color: var(--main-color);
+  }
+  
+  *{
+    margin: 0px;
+    padding: 0px;
+    
+
+  }
+  
+  .image img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid #f2f2f2;
+  }
+  .image2 img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid #f2f2f2;
+  }
+  .image3 img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid #f2f2f2;
+  }
+  .image4 img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid #f2f2f2;
+  }
+  .tutor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .tutor img {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px; 
+  }
+
+  .stars img {
+    width: 100px; 
+    height: 100x; 
+  }
+
+
+          
+        

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KIDCODEX Home</title>
+	
+	<link rel="StyleSheet" href="nav_footer.css">
+    <link rel="StyleSheet" href="HomeStyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<style>
+          
+        
+		/* Dropdown styles */
+		.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+	  
+		.dropbtn {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 12px;
+		  font-size: 16px;
+		  border: none;
+		  cursor: pointer;
+		}
+	  
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		  z-index: 1;
+		}
+	  
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		}
+	  
+		.dropdown-content a:hover {
+		  background-color: #ddd;
+		}
+	  
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+	  
+		
+	  </style>
+</head>
+<body >
+	
+		
+
+	<header>
+		
+          
+    
+		<div id="header">
+			
+			<img src="image/logo.png" alt="">
+			<ul id="navbar">
+				<li><a class="active" href="index.html">Home</a></li>
+				<li><a href="Courses_Page.html">Courses</a></li>
+				<li><a href="tutor.html">Tutor</a></li>
+				<li><a href="copyadmin.html">Administractor Dashboard</a></li>
+				<li class="dropdown">
+					<a href="parent.html" class="dropbtn">Parent Dashboard</a>
+					<div class="dropdown-content">
+					<a href="registerNewKid.html">Register a new child</a>
+					<a href="enrolmentPage.html">Course Enrollment</a>
+					<a href="EvaluationPage.html">Course Evaluation</a>
+					</div>
+				  </li>
+				
+			</ul>
+			<img src="image/moon.png" alt="" id="icon">
+
+		
+			
+		</div>
+		
+	</header>
+
+<script>
+var icon = document.getElementById("icon");
+
+icon.addEventListener("click", function() {
+  toggleDarkTheme();
+  updateThemePreference();
+});
+
+
+function toggleDarkTheme() {
+  document.body.classList.toggle("dark-theme");
+  
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "image/sun1.png";
+  } else {
+    icon.src = "image/moon.png";
+  }
+}
+
+
+function updateThemePreference() {
+  var isDarkThemeEnabled = document.body.classList.contains("dark-theme");
+  localStorage.setItem("themePreference", isDarkThemeEnabled ? "dark" : "root");
+}
+
+
+
+
+</script>
+
+<div id="hero">
+
+<h1 >Let Your Kids Learn Programming</h1>
+<br><br>
+<h3>Join us in the exciting world of programming and turn
+your ideas into reality.<br> Unlock the world of endless possibilities 
+learn to code and shape the digital future with us.</h3>
+	<br><br>
+	<button onclick="window.location.href='Courses_Page.html'">Explore Courses</button>
+
+</div>
+	
+
+	
+
+
+
+<br><br><br><br>
+<div class="area">
+		  <div class="wrapper">
+			<h1>Our Courses</h1>
+			
+			<ul class="circles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+		</ul>
+				 <div class="content-box">
+					<div ID="card1" class="card">
+						<img src="Image/Java.png" alt="" >
+						<h2>JAVA</h2>
+						<div class="rating">4.6</div><br>
+					  <p>you will explore programming concepts, variables, object-oriented programming, and problem-solving. Inspires curiosity, logical thinking, and prepares for future Java programming.</p>
+	
+					</div>
+					<div ID="card2" class="card">
+						<img src="Image/Scratch.png" alt="" >
+						<h2>SCRATCH</h2>
+						<div class="rating">5</div><br>
+					   <p>You will learn basic programming skills by creating interactive storybooks, animations, and games with Scratch, which is a block-based visual programming language for anyone new to coding.</p>
+							 
+					</div>
+					<div ID="card3" class="card">
+						<img src="Image/sql.png" alt="" >
+						<h2>SQL</h2>
+						<div class="rating">4.7</div><br>
+					<p>SQL is a programming language used for managing and manipulating relational databases. It allows users to query, retrieve, and modify data stored in a database.</p>
+							 
+					</div>
+					<div ID="card4" class="card">
+						<img src="Image/C++.png" alt="" >
+						<h2>C++</h2>
+						<div class="rating">4.3</div><br>
+						<p> introducing programming in a fun and interactive way. Covers variables, control structures, functions, and object-oriented programming. Develops problem-solving skills and creativity through hands-on projects.</p>
+							 
+					</div>
+					<div ID="card5" class="card">
+						<img src="Image/Python.png" alt="" >
+						<h2>PYTHON</h2>
+						<div class="rating">4.9</div><br>
+						<p>Python Programming is a fun and interactive course designed to introduce children the basics of coding using the Python programming language. kids will learn programming fundamentals, problem-solving skills . </p>
+							 
+					</div>
+					<div ID="card6" class="card">
+						<img src="Image/figma.png" alt="" >
+						<h2>FIGMA</h2>
+						<div class="rating">4.8</div><br>
+						<p>Figma Design an interactive course that introduces children the fundamentals of design using Figma.  kids will learn how to create and prototype designs, design user interfaces, and collaborate with others. .</p>
+							 
+					</div>
+				 </div>
+		</div>
+	
+		<br><br><br><br>
+
+	
+
+		
+<!--our team-->
+	<section>
+		<div class="Twrapper">
+			<h1>Our Tutor</h1>
+			<div class="team">
+			  <div class="team_member">
+				<div class="team_img">
+				  <img src="image/tutorF.png" alt="Team_image">
+				</div>
+				<h3>Emily Johnson</h3>
+				<p class="role"></p>
+				<p>PhD Computer Science -Harverd University   </p>
+			  </div>
+			  <div class="team_member">
+				<div class="team_img">
+				  <img src="image/tutorM.png" alt="Team_image">
+				</div>
+				<h3>Daniel smith</h3>
+				<p class="role"></p>
+				<p>MSc  Information Tecnology -Stanford University</p></div>
+			  <div class="team_member">
+				<div class="team_img">
+				  <img src="image/tutorM2.png" alt="Team_image">
+				</div>
+				<h3>Hassan Tariq</h3>
+				<p class="role"></p>
+				<p>MSc Computer Science -Yale Universit</p>
+			  </div>
+			</div>
+		  </div>
+
+
+
+
+
+
+	</section>
+
+	<br><br><br>
+
+	
+
+
+					<!--review-->
+		<section>
+			<div class="rev-section">
+	
+				<h2 class="title">Reviews</h2>
+				
+				
+				<div class="reviews">
+				
+				<div class="review">
+				   <div class="head-review">
+					  <img src="image/review1.png" alt="" width="250" >
+				   </div>
+				   <div class="body-review">
+					  <div class="name-review">Mark John</div>
+					  <div class="place-review">JAVA</div>
+					  <div class="rating">
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star-half"></i>
+					  </div>
+					  <div class="desc-review">The course provides a solid introduction to Java programming concepts, making it accessible for young learners. It covers the fundamentals and helps children develop problem-solving skills through coding exercises.</div>
+				   </div>
+				</div>
+				<div class="review">
+				   <div class="head-review">
+					  <img src="image/review2.png" alt="" width="250">
+				   </div>
+				   <div class="body-review">
+					  <div class="name-review">SARA  </div>
+					  <div class="place-review">SCRATCH</div>
+					  <div class="rating">
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+					  </div>
+					  <div class="desc-review">The Scratch course for kids is a fantastic program that introduces coding and creativity. It's engaging, user-friendly, and fosters problem-solving skills. Kids learn at their own pace, create interactive projects, and join a supportive community. It's a great way for kids to develop essential skills while having fun. Highly recommended! </div>
+				   </div>
+				</div>
+				<div class="review">
+				   <div class="head-review">
+					  <img src="image/review3.png" alt="" width="250">
+				   </div>
+				   <div class="body-review">
+					  <div class="name-review">Kevin James</div>
+					  <div class="place-review">WeEB DESIGN</div>
+					  <div class="rating">
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star"></i>
+						 <i class="fas fa-star-half"></i>
+					  </div>
+					  <div class="desc-review">It's an excellent starting for web designers!,
+						my child learn how to build his first wesite
+					</div>
+				   </div>
+				</div>
+				
+				</div>
+				
+				</div>
+			</section>
+
+<!--goal-->
+			
+				<div class="goal">
+					<br>	<br>
+				<h1>Our Goal</h1>
+				<span class="divider"></span>	<br><br>
+					
+				<br>	<br>
+
+				<p>Our website is dedicated to simplifying the process of registering children for courses by their parents.
+					 By providing an easy-to-use interface, detailed information about the course, and a simplified registration
+					 system, to empower parents by providing them with the tools necessary to make informed decisions about their 
+					            childrens educational journey and know the extent of their results and development.</p>
+				 <br>	<br>
+				 
+				 <br>	<br>
+			</div>
+			
+			
+			
+			
+
+					
+
+					<br>	<br><br>	<br>	
+					<div>
+						<footer>
+							<div class="footercontainer">
+								<div class="socialicon">
+								<a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+								<a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+								<a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+								<a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+								<a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+								</div>
+								<div class="footernav">
+							<ul>
+							  <li><a href ="About-us.html">About Us</a></li>
+							   <li><a href ="contact-us.html">Contact Us</a></li>
+					
+							</ul>
+							   </div>
+					
+							<div class="fotterCopyright">
+								<hr>
+							<p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+						  </div>
+						  
+						</div>
+					
+						</footer>
+					</div>
+				</div>
+</body>
+
+</html>

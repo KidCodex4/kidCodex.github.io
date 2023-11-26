@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>KidCodex-CourseEvaluaton</title>
+        <link rel="stylesheet" href="E.css">
+        <link rel="StyleSheet" href="nav_footer.css">
+
+        <style>
+          
+        
+          /* Dropdown styles */
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+        
+          .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+        
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+        
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+        
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+        
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+        
+          
+        </style>
+        
+      
+    </head>
+
+  <body>
+
+              <div class="forDes">
+                <header>
+		
+          
+    
+                  <div id="header">
+                    
+                    <img src="image/logo.png" alt="">
+                    <ul id="navbar">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="Courses_Page.html">Courses</a></li>
+                      <li><a href="tutor.html">Tutor</a></li>
+                      <li><a href="copyadmin.html">Administractor Dashboard</a></li>
+                      <li class="dropdown">
+                        <a class="active dropbtn" href="parent.html" >Parent Dashboard</a>
+                        <div class="dropdown-content">
+                        <a href="registerNewKid.html">Register a new child</a>
+                        <a href="enrolmentPage.html">Course Enrollment</a>
+                        <a href="EvaluationPage.html">Course Evaluation</a>
+                        </div>
+                        </li>
+                      
+                    </ul>              
+                  
+                    
+                  </div>
+                  
+                </header>
+                <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+        var themePreference = localStorage.getItem("themePreference");
+
+        if (themePreference === "dark") {
+          document.body.classList.add("dark-theme");
+        } else {
+          document.body.classList();
+        }
+      });
+
+
+                  document.addEventListener("DOMContentLoaded", function() {
+                    var themePreference = localStorage.getItem("themePreference");
+                    
+                    if (themePreference === "dark") {
+                      document.body.classList.add("dark-theme");
+                    }
+                    else{
+                      document.body.classList();
+                    }
+                  });
+                      
+                        
+                 </script>
+              
+    <form id="evaluationForm" class="ser">
+
+            <div class="form-group">
+              
+                <p id="quest1">choose the course: </p>
+                <select name="role" required id="dropdown" class="formControl">
+                    <option value disabled selected >Select the course</option>
+                    <option value="c1">Scratch</option>
+                    <option value="c2">JAVA</option>
+                    <option value="c3">Python</option>
+                    <option value="c4">Figma</option>
+                    <option value="c5">Web Design</option>
+                    <option value="c6">C++</option>
+
+
+                </select>
+               </div>
+
+             <br>
+
+             <div id="shoqDot">
+                 <label>Q1: How satisfied are you with the content covered in the course?</label>
+                   <ul class="noDot">
+                     <li><input  type="radio" name="ch1" value="Very satisfied"> Very satisfied </li> 
+                     <li><input  type="radio" name="ch2" value="Satisfied"> Satisfied</li> 
+                     <li><input  type="radio" name="ch3" value="Neutral"> Neutral</li> 
+                     <li><input  type="radio" name="ch4" value="Dissatisfied"> Dissatisfied</li>
+                     <li><input  type="radio" name="ch5" value="Very Dissatisfied"> Very Dissatisfied</li>
+                   </ul>
+                 
+                 <br>
+
+                 <label>Q2: Did the course meet your expectations? </label>
+                  <ul class="noDot">
+                    <li><input  type="radio" name="ch1" value="Completely"> Completely </li> 
+                    <li><input  type="radio" name="ch2" value="Mostly"> Mostly</li> 
+                    <li><input  type="radio" name="ch3" value="Moderately"> Moderately</li> 
+                    <li><input  type="radio" name="ch4" value="Somewhat"> Somewhat</li>
+                    <li><input  type="radio" name="ch5" value="Not at all"> Not at all</li>
+                  </ul>
+                  
+                <br>
+                <label>Q3: How would you rate the tutor's knowledge and expertise in delivering the course material? </label>
+                  <ul class="noDot">
+                    <li><input  type="radio" name="ch1" value="Excellent"> Excellent </li> 
+                    <li><input  type="radio" name="ch2" value="Very Good"> Very good</li> 
+                    <li><input  type="radio" name="ch3" value="Good"> Good</li> 
+                    <li><input  type="radio" name="ch4" value="Fair"> Fair</li>
+                    <li><input  type="radio" name="ch5" value="Poor"> Poor</li>
+                  </ul>
+                  
+                <br>
+               
+                 <label>write your feedback here:<br> <textarea name="entry" rows="6" cols="64"> write here.....</textarea></label>
+                 <br>
+                   <!--مكان السبمت-->
+                    <div class="possb">
+                   <input class="sb" type="submit">
+
+                    </div>
+             </div>
+    </form>
+            
+  
+            
+            <h1>Please rate your experience about one of the courses here:</h1>
+
+        </div>
+
+    <div>
+      <div>
+        <footer>
+          <div class="footercontainer">
+            <div class="socialicon">
+            <a href="https://twitter.com/"><img src="image/X.png" alt="X_logo" width="25" height="30"></a>
+            <a  href="https://www.instagram.com/"><img src="image/instagram_logo.png" alt="instagram_logo" width="25" height="30"></a>
+            <a href="mailto:kidcodex@gmail.com"><img src="image/mail.png" alt="gmail_logo" width="25" height="30"></a>
+            <a href="https://www.facebook.com/"><img src="image/facebook.png" alt="facebook_logo" width="25" height="30"></a>
+            <a href="https://www.facebook.com/"><img src="image/linkedin.png" alt="linkedin_logo" width="25" height="30"></a>
+            </div>
+            <div class="footernav">
+          <ul>
+            <li><a href ="About-us.html">About Us</a></li>
+             <li><a href ="contact-us.html">Contact Us</a></li>
+      
+          </ul>
+             </div>
+      
+          <div class="fotterCopyright">
+            <hr>
+          <p>Copyright &copy;2023 ; Designed by KidCodexTeam</p>
+          </div>
+          
+        </div>
+      
+        </footer>
+      </div>
+    
+    </div>
+  
+
+  </body>
+
+      <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            // Wait for the DOM to be fully loaded
+    
+            var form = document.getElementById("evaluationForm");
+    
+            form.addEventListener("submit", function (event) {
+             // Prevent the default form submission
+            event.preventDefault();
+    
+            // Check if a course is selected
+            var courseSelect = document.getElementById("dropdown");
+            var selectedCourse = courseSelect.options[courseSelect.selectedIndex].text;
+    
+            if (selectedCourse === "Select the course") {
+              alert("Please select a course before submitting.");
+              return;
+            }
+    
+            // Check if a rating is selected
+            var ratingInputs = document.querySelectorAll('input[name^="ch"]:checked');
+            if (ratingInputs.length === 0) {
+              alert("Please select a rating before submitting.");
+              return;
+            }
+    
+            // Display the alert with the selected course and rating
+            var userRating = ratingInputs[0].value;
+            alert("Thank you for your feedback!\nYour rating for course " + selectedCourse + " is " + userRating);
+             });
+           });
+      </script>
+    
+
+</html>
+
+

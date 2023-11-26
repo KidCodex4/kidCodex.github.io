@@ -1,0 +1,237 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Poppins&display=swap');
+
+*{/*was **/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.wrapper{
+  font-family: 'poppins',sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+}
+.wrapper h1{
+  font-size: 3em;
+
+  margin: 25px;
+}
+.content-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin-top: 30px;
+}
+
+:root{
+  --pcard: rgb(241, 221, 241);
+  --gcard:rgba(234, 248, 225, 0.906);
+  --bcard: rgba(193, 231, 243, 0.877);
+  --coursetxt:#6c757d;
+  --head:black;
+}
+.dark-theme{
+  
+  --pcard:#627f9c;
+  --gcard:#627f9c;
+  --bcard:#627f9c;
+  --head:rgb(231, 231, 231);
+  --coursetxt:white;
+}
+
+/*
+courses
+*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.wrapper{
+font-family: 'poppins',sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background:transparent;
+}
+.wrapper h1{
+font-size: 3em;
+
+margin: 25px;
+}
+.content-box{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+width: 1000px;
+margin-top: 30px;
+}
+#card1,#card5,#card9{
+min-height: 220px;
+width: 320px;
+padding: 30px;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background:var(--bcard);
+margin: 10px 4px;
+box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+
+#card1 h2,
+#card5 h2,#card9 h2{
+margin-bottom: 12px;
+font-weight: 400;
+text-align: center;
+background: var(--bcard);
+}
+#card1:hover .details,#card5:hover .details,#card9:hover .details {
+  display:block;
+  overflow: auto;
+  justify-content: space-between;
+  background-color:var(--bcard);
+}
+#card1 p,
+#card5 p,#card9 p{
+color:var(--coursetxt);
+text-align: center;
+background: var(--bcard);
+}
+
+#card1:hover h2,#card5:hover h2,#card9:hover h2{
+font-weight: 500;
+background: var(--bcard);
+}
+
+#card1 img,#card5 img,#card9 img{
+height: 70px;
+background: var(--bcard);
+}
+
+#card3,#card4,#card8{
+min-height: 220px;
+width: 320px;
+padding: 30px;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background:var(--gcard);
+margin: 10px 4px;
+box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+
+#card3 h2,
+#card4 h2,#card8 h2{
+margin-bottom: 12px;
+font-weight: 400;
+text-align: center;
+background: var(--gcard);
+}
+#card3 p,
+#card4 p,#card8 p{
+color:var(--coursetxt);
+text-align: center;
+background:var(--gcard);
+}
+
+#card3:hover h2,#card4:hover h2,#card8:hover h2{
+font-weight: 500;
+background:var(--gcard);
+}
+
+#card3 img,#card4 img,#card8 img{
+height: 70px;
+background:var(--gcard);
+}
+#card3:hover .details,#card4:hover .details,#card8:hover .details {
+  display:block;
+  overflow: auto;
+  justify-content: space-between;
+  background-color:var(--gcard);
+}
+#card2,#card6,#card7{
+min-height: 220px;
+width: 320px;
+padding: 30px;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background:var(--pcard);
+margin: 10px 4px;
+box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+
+#card2 h2,
+#card6 h2,#card7 h2{
+margin-bottom: 12px;
+font-weight: 400;
+text-align: center;
+background:var(--pcard);
+}
+#card2 p,
+#card6 p,#card7 p{
+color: var(--coursetxt);
+text-align: center;
+background: var(--pcard);
+}
+
+#card2:hover h2,#card6:hover h2,#card7:hover h2{
+font-weight: 500;
+background: var(--pcard);
+}
+
+#card2 img,#card6 img,#card7 img{
+height: 70px;
+background:var(--pcard);
+}
+
+#card2:hover .details,#card7:hover .details,#card6:hover .details {
+  display:block;
+  overflow: auto;
+  justify-content: space-between;
+  background-color:var(--pcard);
+}
+
+  /**/
+ 
+
+
+.course:hover {
+  background-color: #e0e0e0;
+}
+
+.rating {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color:aliceblue;
+  color: black;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-block-end: 10px;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
+
+
